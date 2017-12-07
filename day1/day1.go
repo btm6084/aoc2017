@@ -20,11 +20,11 @@ func main() {
 		os.Exit(1)
 	}
 
-	part1(bytes)
-	part2(bytes)
+	fmt.Printf("Part 1 Sum: %d\n", sumByNext(bytes))
+	fmt.Printf("Part 2 Sum: %d\n", sumByHalf(bytes))
 }
 
-func part1(bytes []byte) {
+func sumByNext(bytes []byte) int {
 	last := len(bytes) - 1
 	next := 0
 	sum := 0
@@ -44,10 +44,10 @@ func part1(bytes []byte) {
 		}
 	}
 
-	fmt.Printf("Part 1 Sum: %d\n", sum)
+	return sum
 }
 
-func part2(bytes []byte) {
+func sumByHalf(bytes []byte) int {
 	next := 0
 	step := len(bytes) / 2
 	sum := 0
@@ -67,5 +67,5 @@ func part2(bytes []byte) {
 		}
 	}
 
-	fmt.Printf("Part 2 Sum: %d\n", sum)
+	return sum
 }
