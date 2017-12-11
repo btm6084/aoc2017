@@ -45,7 +45,7 @@ func findSecondExit(maze []int) int {
 		move := maze[start]
 		current = start + move
 
-		// Increment previous position by 1.
+		// Increment previous position by 1 if less than 3, otherwise decrement.
 		if move >= 3 {
 			maze[start]--
 		} else {
