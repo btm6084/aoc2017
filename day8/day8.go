@@ -126,8 +126,8 @@ func main() {
 
 }
 
-func loadFromFile(filname string) []Instruction {
-	bytes, err := ioutil.ReadFile("./input.txt")
+func loadFromFile(filename string) []Instruction {
+	bytes, err := ioutil.ReadFile(filename)
 	if err != nil {
 		fmt.Println(err)
 		os.Exit(1)
